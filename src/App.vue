@@ -8,22 +8,23 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions } from "vuex";
+
 export default {
-  name: 'App',
+  name: "app",
   components: {},
-  methods: {
-    ...mapActions('movies', ['fetchMovies']),
-  },
   mounted() {
     this.fetchMovies();
   },
+  methods: {
+    ...mapActions("movies", ["fetchMovies"])
+  }
 };
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
