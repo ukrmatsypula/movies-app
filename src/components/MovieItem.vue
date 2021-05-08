@@ -7,10 +7,10 @@
         <span class="movie-year">{{ movie.Year }}</span>
       </div>
       <div class="movie-item-controls row no-gutters">
-        <div class="col">
+        <div class="col pr-2">
           <BButton size="md" block variant="outline-light">Edit</BButton>
         </div>
-        <div class="col">
+        <div class="col pl-2">
           <BButton size="md" block variant="outline-light">Remove</BButton>
         </div>
       </div>
@@ -70,7 +70,7 @@ export default {
 }
 
 .movie-title {
-  font-size: 18px;
+  font-size: 20px;
   color: #fff;
 }
 
@@ -80,7 +80,7 @@ export default {
 }
 
 .movie-info-wrap {
-  padding: 10px;
+  padding: 20px 10px;
   height: 100%;
   opacity: 0;
   transition: all .2s ease;
