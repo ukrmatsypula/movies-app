@@ -83,6 +83,6 @@ export default {
   padding: 20px 10px;
   height: 100%;
   opacity: 0;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 </style>

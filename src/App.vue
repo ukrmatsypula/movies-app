@@ -2,6 +2,7 @@
   <div id="app">
     <PosterBg :poster="posterBg" />
     <MoviesList :list="moviesList" @changePoster="onChangePoster" />
+    <MoviesPagination />
   </div>
 </template>
 
@@ -9,12 +10,14 @@
 import { mapActions, mapGetters } from "vuex";
 import MoviesList from "./components/MoviesList.vue";
 import PosterBg from "./components/PosterBg.vue";
+import MoviesPagination from './components/MuviesPagination.vue';
 
 export default {
   name: "app",
   components: {
     MoviesList,
     PosterBg,
+    MoviesPagination,
   },
   data: () => ({
     posterBg: "",
