@@ -1,25 +1,42 @@
 <template>
   <div class="movies-pagination d-flex justify-content-center">
     <BPagination
-      v-model="currentPage"
+      v-model="currentPageModel"
       :per-page="perPage"
       :total-rows="total"
       prev-text="Prev"
       next-text="Next"
     />
-
-    {{ currentPage }}
   </div>
 </template>
 
 <script>
 export default {
   name: "MoviesPagination",
-  data: () => ({
-    currentPage: 1,
-    total: 100,
-    perPage: 12,
-  }),
+  props: {
+    currentPage: {
+      typeof: Number,
+      default: 1,
+    },
+    total: {
+      type: Number,
+      default: 1,
+    },
+    perPage: {
+      type: Number,
+      default: 1,
+    },
+  },
+  computed: {
+    currentPageModel: {
+      get() {
+        return this.currentPage;
+      },
+      set(value) {
+        this.$emit("pageChanged", value);
+      },
+    },
+  },
 };
 </script>
 
