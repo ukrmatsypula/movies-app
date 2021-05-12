@@ -83,7 +83,6 @@ const moviesStore = {
         dispatch("toggleLoader", true, { root: true });
 
         const response = await axios.get(`/?s=${query}`);
-        console.log(response);
         if (response.Error) {
           throw Error(response.Error);
         }
@@ -91,7 +90,11 @@ const moviesStore = {
         const movies = serializeResponse(response.Search);
         commit(MOVIES, movies);
       } catch (err) {
-        console.log(err.message);
+        dispatch("showNotify", {
+          message: err.message,
+          title: "Error",
+          variant: "danger",
+        }, { root: true, });
       } finally {
         dispatch("toggleLoader", false, { root: true });
       }
