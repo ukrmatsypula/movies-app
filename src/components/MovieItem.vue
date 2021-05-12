@@ -36,7 +36,7 @@ export default {
   computed: {
     posterBg() {
       return {
-        backgroundImage: `url(${this.movie.Poster})`,
+        backgroundImage: `url(${this.movie.Poster !== "N/A" ? this.movie.Poster : "http://www.placehold.it/400"})`,
       };
     },
   },
