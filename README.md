@@ -1,5 +1,6 @@
 # movies-app
 
+![Alt text](movies-app.gif "Demo movies-app")
 ## Project setup
 ```
 npm install
