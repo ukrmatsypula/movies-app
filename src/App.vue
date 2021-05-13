@@ -68,10 +68,13 @@ export default {
 
 <style>
 #app {
+  display: flex;
+  flex-direction: column;
   font-family: "Arial", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
   color: #fff;
+  min-height: 100vh;
 }
 </style>

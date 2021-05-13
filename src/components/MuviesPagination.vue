@@ -42,7 +42,7 @@ export default {
 
 <style lang="scss" scoped>
 .movies-pagination {
-  margin-top: 30px;
+  margin-top: auto;
 }
 
 .movies-pagination /deep/ .pagination .page-item .page-link {
